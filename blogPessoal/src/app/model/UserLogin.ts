@@ -1,5 +1,5 @@
 export class UserLogin {
-  public usuario: string;
+  public user: string;
   public senha: string;
   public token: string;
 }

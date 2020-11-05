@@ -15,7 +15,7 @@ export class CadastroComponent implements OnInit {
   senha: string;
 
   constructor(
-    private AuthService: AuthService,
+    private authService: AuthService,
     private router: Router
   ) { }
 
@@ -28,7 +28,7 @@ export class CadastroComponent implements OnInit {
 
   cadastrar() {
     if (this.senha === this.user.senha) {
-      this.AuthService.cadastrar(this.user).subscribe((resp: User) => {
+      this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp;
         this.router.navigate(['/login'])
         alert('Usuário cadastrado com sucesso')
